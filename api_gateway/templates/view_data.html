@@ -1,0 +1,20 @@
+<!-- api_gateway/templates/view_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Data</title>
+</head>
+<body>
+    <h1>View Data</h1>
+
+    {% if data_from_service %}
+        <ul>
+            {% for key, value in data_from_service.items %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No data in the service</p>
+    {% endif %}
+</body>
+</html>
